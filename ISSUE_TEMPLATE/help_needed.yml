@@ -1,0 +1,60 @@
+name: 도움 요청 (Help Needed)
+description: 막히는 부분이 있으면 팀에 도움을 요청해주세요.
+title: "[HELP] "
+labels: [help wanted]
+assignees: []
+
+body:
+  - type: dropdown
+    id: layer
+    attributes:
+      label: 🗂️ 관련 레이어
+      options:
+        - Web (프론트엔드)
+        - API (FastAPI / Python)
+        - 실시간 (WebSocket)
+        - STT / 화자 분리
+        - AI (사담 판단 / 요약)
+        - DB
+        - CI / 배포
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: situation
+    attributes:
+      label: ❓ 문제 상황
+      description: 무엇을 하려다가 어디서 막혔는지 적어주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: 🪵 에러 메시지 / 로그
+      description: 민감정보(API 키, 토큰, 회의 내용)는 지우고 붙여주세요.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: code
+    attributes:
+      label: 💻 관련 코드 / 파일
+    validations:
+      required: false
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: 🧪 시도해본 방법
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 💬 추가 내용
+    validations:
+      required: false

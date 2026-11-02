@@ -1,0 +1,49 @@
+name: 문서 개선 (Documentation Improvement)
+description: README, API 명세, 개발 문서 등 문서의 오류나 부족한 부분을 알려주세요.
+title: "[DOCS] "
+labels: [documentation]
+assignees: []
+
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 📁 문서 영역
+      options:
+        - README / 시작하기
+        - API 명세 / 실시간 이벤트
+        - DB / ERD
+        - 개발 규칙 (브랜치 · 커밋 · PR)
+        - 배포 / 환경 변수
+        - 기타
+    validations:
+      required: true
+
+  - type: input
+    id: path
+    attributes:
+      label: 📄 대상 문서 경로
+      placeholder: 예) README.md, docs/api.md, 노션 링크
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: ✏️ 문제점
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: ✅ 개선 제안
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 💬 추가 내용
+    validations:
+      required: false

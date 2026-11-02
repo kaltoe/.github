@@ -1,0 +1,85 @@
+name: 기능 요청 (Feature Request)
+description: 새로운 기능이나 기존 기능의 개선을 제안해주세요.
+title: "[FEATURE] "
+labels: [enhancement]
+assignees: []
+
+body:
+  - type: dropdown
+    id: layer
+    attributes:
+      label: 🗂️ 관련 레이어
+      description: 기능이 추가되거나 변경될 레이어를 선택해주세요.
+      options:
+        - Web (프론트엔드)
+        - API (FastAPI / Python)
+        - 실시간 (WebSocket)
+        - STT / 화자 분리
+        - AI (사담 판단 / 요약)
+        - DB
+        - CI / 배포
+        - 전체 연동 (E2E)
+        - 기타 / 해당 없음
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: 🧩 관련 기능
+      options:
+        - 회의 셋업 (생성 / 안건)
+        - 초대 / 입장
+        - 라이브 (타이머 / 안건 전환)
+        - 실시간 자막
+        - 사담 경고
+        - 회의 종료 / 요약 / 회의록
+        - 공유 링크
+        - 기타 / 해당 없음
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: 🌟 기능 설명
+      description: 필요한 기능과 사용자가 할 수 있어야 하는 일을 설명해주세요.
+      placeholder: 예) 진행자가 [다음 안건] 버튼을 누르면 모든 참여자 화면의 타이머가 다음 안건으로 동시에 바뀌어야 합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-needed
+    attributes:
+      label: 📌 필요 이유
+      description: 현재의 불편이나 해결하려는 문제, 사용자에게 주는 가치를 작성해주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: ✅ 완료 기준 (Acceptance Criteria)
+      description: 구현 완료 여부를 확인할 수 있는 구체적인 조건을 작성해주세요.
+      placeholder: |
+        - [ ] 사용자가 필요한 결과를 확인할 수 있다
+        - [ ] 로딩·빈 결과·오류 상태가 정의되어 있다
+        - [ ] 관련 테스트가 추가되거나 갱신된다
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 💡 대안
+      description: 생각해본 다른 해결 방법이나 접근 방식이 있다면 적어주세요.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 💬 추가 내용
+      description: 참고 자료, 화면 시안, 관련 API·이벤트, 기능명세서 항목, 관련 이슈를 공유해주세요.
+    validations:
+      required: false

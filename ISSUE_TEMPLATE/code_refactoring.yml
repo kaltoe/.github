@@ -1,0 +1,58 @@
+name: 코드 리팩토링 (Code Refactoring)
+description: 동작은 그대로 두고 코드 구조나 품질을 개선할 부분을 제안해주세요.
+title: "[REFACTOR] "
+labels: [refactor]
+assignees: []
+
+body:
+  - type: dropdown
+    id: layer
+    attributes:
+      label: 🗂️ 대상 레이어
+      options:
+        - Web (프론트엔드)
+        - API (FastAPI / Python)
+        - 실시간 (WebSocket)
+        - STT / 화자 분리
+        - AI (사담 판단 / 요약)
+        - DB
+        - CI / 배포
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: target
+    attributes:
+      label: 📁 대상 파일 / 모듈
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 현재 문제점
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: 💡 개선 방향
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: ⚠️ 영향 범위와 호환성
+      description: API·실시간 이벤트 형식이 바뀌는지, 다른 파트 작업에 영향이 있는지 적어주세요.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 💬 추가 내용
+    validations:
+      required: false
